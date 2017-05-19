@@ -1,11 +1,118 @@
 <!DOCTYPE html>
 {% load staticfiles %}
-<html>
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="{% static 'css/homepage.css' %}">
-	<title>Melanie's Website</title>
-</head>
-<body>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
+	<title>Melanie's Website</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link rel="stylesheet" type="text/css" href="{% static 'ie10-viewport-bug-workaround.css' %}">
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}">
+	<!--<link rel="stylesheet" href="{% static 'homepage.css' %}">-->
+</head>
+
+
+<body>
+    <div class="site-wrapper">
+        <div class="site-wrapper-inner">
+            <div class="cover-container">
+
+                <div class="masthead clearfix">
+                    <div class="inner">
+                        <h3 class="masthead-brand">Project Depot</h3>
+
+                        <nav>
+                            <ul class="nav masthead-nav">
+                                <!-- Home page -->
+                                <li class="active"><a href="#">Home</a></li>
+                                <!-- Time series -->
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Time Series<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#subsonic">What &amp; Why</a></li>
+                                        <li><a href="#subsonic">Noise Detection</a></li>
+                                        <li><a href="#supersonic">Structure Visualization</a></li>
+                                    </ul>
+                                </li>
+                                <!-- Transportation -->
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Images<span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="#taxi">Wave Tracking</a></li>
+                                    </ul>
+                                </li>
+                                <!-- About -->
+                                <li><a href="#about">About</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="inner cover">
+                    <!-- <h1 class="cover-heading">Cover your page.</h1> -->
+                    <div class="slideshow-container">
+                        <div class="mySlides fade">
+                            <div class="text">Caption Text</div>
+                            <img src="../static/Events_synthetic_SN1.png" alt = "some text" style="width:100%">
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="text">Caption Text</div>
+                            <img src="../static/supersonic.pdf" alt = "some text" style="width:100%">
+                        </div>
+                    </div>
+
+                    <script>
+                        var slideIndex = 0;
+                        showSlides();
+                        function showSlides() {
+                            var i;
+                            var slides = document.getElementsByClassName("mySlides");
+                            for (i = 0; i < slides.length; i++) {
+                                slides[i].style.display = "none"; 
+                            }
+                            slideIndex++;
+                            if (slideIndex> slides.length) {slideIndex = 1} 
+                            slides[slideIndex-1].style.display = "block"; 
+                            setTimeout(showSlides, 5000); // Change image every 5 seconds
+                        }
+                    </script>
+
+                    <br />
+
+                    <div>
+                        <p class="lead">
+                            Pattern Extraction and Problem Solving through <br />Signal Processing and Algorithm Design
+                        </p>
+                             <!-- <p class="lead">
+                                <a href="#" class="btn btn-lg btn-default">Learn more</a>
+                            </p> -->
+                       </div>
+                    </div>
+                </div>
+
+                <div class="mastfoot">
+                    <div class="inner">
+                        <p>&copy; 2017 Melanie Kan</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    <script src="../static/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../static/ie10-viewport-bug-workaround.js"></script>
 </body>
 </html>
