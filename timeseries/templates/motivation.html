@@ -13,44 +13,82 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link rel="stylesheet" type="text/css" href="{% static 'ie10-viewport-bug-workaround.css' %}">
     <!-- Custom styles for this template -->
-    <!--link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}"-->
-    <!--<link rel="stylesheet" href="{% static 'homepage.css' %}">-->
+    <link rel="stylesheet" type="text/css" href="{% static 'motivation.css' %}">
 </head>
 
 
 <body>
-    <div class="site-wrapper">
-        <div class="site-wrapper-inner">
-            <div class="cover-container">
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item" href="../../#">Home</a>
+                <a class="blog-nav-item active" href="#">Time Series</a>
+                <a class="blog-nav-item" href="algorithm">Event Detection</a>
+                <a class="blog-nav-item" href="visualize">Visualization</a>
+                <!--a class="blog-nav-item" href="../../images/waves">Images</a>
+                <a class="blog-nav-item" href="../../about">About</a-->
+            </nav>
+        </div>
+    </div>
 
-                <div class="masthead clearfix">
-                    <div class="inner">
-                        <h3 class="masthead-brand">Time Series</h3>
-
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <!-- Time series -->
-                                <li><a href="algorithm">Event Detection</a></li>
-                                <li><a href="visualize">Visualization</a></li>
-                                <!-- Home page -->
-                                <li><a href="../../#">Home</a></li>
-                            </ul>
-                        </nav>
+    <div class="container">
+        <div class="blog-header">
+            <h1 class="blog-title">What &amp; Why</h1>
+            <p class="lead blog-description">Extract acoustic source from time series; identify and visualize event-associated structures</p>
+        </div>
+        <div class="blog-main">
+            <div class="blog-post">
+                <h2 class="blog-post-title">Motivation: Reduction of Aircraft Noise</h2>
+                <br>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <img src="../static/airplane-noise-300x243.jpg" alt = "aircraft-noise" style="width:100%">
+                    </div>
+                    <div class="col-sm-9">
+                        <ul>
+                            <li>Sustained exposure to aircraft noise (e.g., air crews) can lead to hearing damage and loss.</li>
+                            <li>Expansion of airports threatens more residences with noise pollution.</li>
+                        </ul>
+                        <p>My research focused on the noise from air flow, since over 50% of aircraft noise comes from the engine exhaust.</p>
                     </div>
                 </div>
-
-                <div class="inner cover">
-                    <h1 class="cover-heading">What &amp; Why</h1>
+                <br>
+                <h2 class="blog-post-title">Problem Statement</h2>
+                <br>
+                <div>
+                    <img src="../static/jetnoiseproblem.png" alt = "problem-statement" style="width:100%">
                 </div>
-
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p align="center">&copy; 2017 Melanie Kan</p>
-                    </div>
-                </div>
+                <br>
+                <h3>Given:</h3>
+                <ul>
+                    <li>Aircraft <span style="background-color: #3e8e91">noise</span> measured as acoustic signals (time series)</li>
+                    <li>Flow quantities (e.g. velocity) measured as 1D time series / 2D images, which contain both</li>
+                        <ul>
+                            <li>Noise-producing structures (<span style="background-color: #8cd4fb">events</span>)</li>
+                            <li>Those unrelated to noise production</li>
+                        </ul>
+                </ul>
+                <h3>Task:</h3>
+                <ul>
+                    <li>Isolate the noise-producing events</li>
+                    <li>Identify &amp; the event-associated structures</li>
+                </ul>
+                <h3>Approach:</h3>
+                <ul>
+                    <li><a href="algorithm">Event detection algorithm</a> (time-frequency signal processing, statistical signal processing, pattern recognition)</li>
+                    <li>New time-frequency &amp; statistical <a href="visualize">visualization techniques</a> for structure identification</li>
+                </ul>
+                <!--img src="../static/problemstatement.png" alt = "problem-statement" style="width:100%"-->
             </div>
         </div>
     </div>
+
+    <footer class="blog-footer">
+      <p>&copy; 2017 Melanie Kan</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
 
 
     <!-- Bootstrap core JavaScript
