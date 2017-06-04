@@ -13,45 +13,78 @@
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link rel="stylesheet" type="text/css" href="{% static 'ie10-viewport-bug-workaround.css' %}">
     <!-- Custom styles for this template -->
-    <!--link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}"-->
+    <link rel="stylesheet" type="text/css" href="{% static 'overview.css' %}">
     <!--<link rel="stylesheet" href="{% static 'homepage.css' %}">-->
 </head>
 
 
 <body>
-    <div class="site-wrapper">
-        <div class="site-wrapper-inner">
-            <div class="cover-container">
+    <div class="container">
+        <div class="masthead">
+            <h3 class="text-muted">Structure Identification &amp; Visualization</h3>
+            <nav>
+                <ul class="nav nav-justified">
+                    <li><a href="../../#">Home</a></li>
+                    <li><a href="visualize/motivation">Motivation</a></li>
+                    <li><a href="visualize/techniques">Workflow &amp; Techniques</a></li>
+                    <li><a href="visualize/outcome">Outcome</a></li>
+                    <li class="active"><a href="#">Application</a></li>
+                </ul>
+            </nav>
+        </div>
 
-                <div class="masthead clearfix">
-                    <div class="inner">
-                        <h3 class="masthead-brand">Time Series</h3>
+        <div class="jumbotron">
+            <p>place holder</p>
+        </div>
 
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <!-- Time series -->
-                                <li><a href="motivation">What &amp; Why</a></li>
-                                <li><a href="algorithm">Event Detection</a></li>
-                                <!-- Home page -->
-                                <li><a href="../../#">Home</a></li>
+        <div class="row">
+            <div class="col-lg-3">
+                <h3>Motivation</h3>
+                <p>
+                    <ul>
+                        <li>Give a flow field (2D images), how to extract the hidden structures and visualize their evolution and pathways?</li>
+                        <li>Can we make the conventional signal analysis techniques more intuitive?</li>
+                    </ul>
+                </p>
+                <p><a class="btn btn-primary" href="visualize/motivation" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-6">
+                <h3>Workflow &amp; Techniques</h3>
+                <p>
+                    <ol>
+                        <li><strong>Data Cleaning</strong>: denoising; detrending; down-sampling; faulty data detection &amp; replacement</li>
+                        <li><strong>Data Exploration</strong>: statistical signal processing; spectral analysis; time-frequency signal processing</li>
+                        <li><strong>Big Data Problem</strong>: resolved through constructing Hot-Spots</li>
+                        <li><strong>New Visualization Techniques</strong>:</li>
+                            <ul>
+                                <li>Peak Frequency Distribution</li>
+                                <li>Normalized Spectrum Distribution</li>
+                                <li>Peak Correlation Distribution</li>
+                                <li>Space-Time Correlation</li>
+                                <li>Frequency-Resolved Space-Time Correlation</li>
                             </ul>
-                        </nav>
-                    </div>
-                </div>
-
-                <div class="inner cover">
-                    <h1 class="cover-heading">What &amp; Why</h1>
-                </div>
-
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p align="center">&copy; 2017 Melanie Kan</p>
-                    </div>
-                </div>
+                    </ol>
+                </p>
+                <p><a class="btn btn-primary" href="visualize/techniques" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-3">
+                <h3>Outcome</h3>
+                <p>
+                    <ul>
+                        <li>Extracted the propagation pathways &amp; active frequencies of flow structures</li>
+                    </ul>
+                </p>
+                <p><a class="btn btn-primary" href="visualize/outcome" role="button">View details &raquo;</a></p>
             </div>
         </div>
-    </div>
 
+        <footer class="footer">
+            <p>&copy; 2017 Melanie Kan</p>
+            <p>
+                <a href="#">Back to top</a>
+            </p>
+        </footer>
+    </div>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

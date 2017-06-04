@@ -20,4 +20,6 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'', include('homepage.urls')),
     url(r'^timeseries/', include('timeseries.urls')),
+    url(r'^images/', include('images.urls')),
+    url(r'^about/', include('about.urls')),
 ]
