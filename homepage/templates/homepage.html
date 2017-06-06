@@ -8,13 +8,13 @@
 
 	<title>Melanie's Website</title>
 
-	<!-- Bootstrap core CSS -->
-	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
-	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-	<link rel="stylesheet" type="text/css" href="{% static 'ie10-viewport-bug-workaround.css' %}">
-	<!-- Custom styles for this template -->
-	<link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}">
-	<!--<link rel="stylesheet" href="{% static 'homepage.css' %}">-->
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <link rel="stylesheet" type="text/css" href="{% static 'ie10-viewport-bug-workaround.css' %}">
+  <!-- Custom styles for this template -->
+  <link rel="stylesheet" type="text/css" href="{% static 'homepage.css' %}">
+
 </head>
 
 
@@ -56,29 +56,47 @@
                 <div class="inner cover">
                     <div class="slideshow-container">
                         <div class="mySlides fade">
-                            <div class="text">Caption Text</div>
-                            <img src="../static/Events_synthetic_SN1.png" alt = "some text" style="width:100%">
+                            <div class="text">
+                              Structure extraction &amp; pathway visualization of large datasets, using statistical &amp; time-frequency signal analysis
+                            </div>
+                            <img src="../static/structure.png" alt = "some text" style="width:100%">
+                            <div class="numbertext">1 / 3</div>
                         </div>
                         <div class="mySlides fade">
-                            <div class="text">Caption Text</div>
-                            <img src="../static/supersonic.pdf" alt = "some text" style="width:100%">
+                            <div class="text">
+                              Acoustic event detection algorithm which combines wavelet analysis, multi-correlation &amp; pattern recognition
+                            </div>
+                            <img src="../static/algorithm.png" alt = "some text" style="width:100%">
+                            <div class="numbertext">2 / 3</div>
+                        </div>
+                        <div class="mySlides fade">
+                            <div class="text">
+                              Event-conditioned signal filtering, statistics &amp; ensemble averaging reveal structures &amp; patterns of interest
+                            </div>
+                            <img src="../static/events.png" alt = "some text" style="width:100%">
+                            <div class="numbertext">3 / 3</div>
+                        </div>
+                        <br>
+                        <div style="text-align:center">
+                            <span class="dot" onclick="currentSlide(1)"></span> 
+                            <span class="dot" onclick="currentSlide(2)"></span> 
                         </div>
                     </div>
 
                     <script>
-                        var slideIndex = 0;
-                        showSlides();
-                        function showSlides() {
-                            var i;
-                            var slides = document.getElementsByClassName("mySlides");
-                            for (i = 0; i < slides.length; i++) {
-                                slides[i].style.display = "none"; 
-                            }
-                            slideIndex++;
-                            if (slideIndex> slides.length) {slideIndex = 1} 
-                            slides[slideIndex-1].style.display = "block"; 
-                            setTimeout(showSlides, 5000); // Change image every 5 seconds
-                        }
+                      var slideIndex = 0;
+                      showSlides();
+                      function showSlides() {
+                          var i;
+                          var slides = document.getElementsByClassName("mySlides");
+                          for (i = 0; i < slides.length; i++) {
+                              slides[i].style.display = "none"; 
+                          }
+                          slideIndex++;
+                          if (slideIndex> slides.length) {slideIndex = 1} 
+                          slides[slideIndex-1].style.display = "block"; 
+                          setTimeout(showSlides, 5000); // Change image every 2 seconds
+                      }
                     </script>
 
                     <br />
@@ -100,8 +118,7 @@
         </div>
     </div>
 
-
-	<!-- Bootstrap core JavaScript
+  <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
