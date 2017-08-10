@@ -100,6 +100,10 @@ h6, .h6 {
   margin-bottom: 5px;
   font-size: 30px;
 }
+.btn-primary {
+	background-color: #79529E;
+	border: 1px solid #B8BEDD;
+}
 
 /*
  * Footer
