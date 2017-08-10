@@ -18,4 +18,5 @@ from . import views
 
 urlpatterns = [
     url(r'iosapps$', views.iosapps, name = 'iosapps'),
+    url(r'minis$', views.minis, name = 'minis'),
 ]

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Data Science Mini-Projects</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <link rel="stylesheet" type="text/css" href="{% static 'ie10-viewport-bug-workaround.css' %}">
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" type="text/css" href="{% static 'blog.css' %}">
+</head>
+
+
+<body>
+    <div class="blog-masthead">
+        <div class="container">
+            <nav class="blog-nav">
+                <a class="blog-nav-item" href="../../#">Home</a>
+                <a class="blog-nav-item active" href="#">Mini-Projects</a>
+                <!-- <a class="blog-nav-item" href="iosapps">Projects - Dataframes</a> -->
+            </nav>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="blog-header">
+            <h1 class="blog-title">Data Science Mini-Projects</h1>
+            <p class="lead blog-description">Data modeling and prediction practice, using publicly available datasets</p>
+        </div>
+        <div class="blog-main">
+            <div class="blog-post">
+
+                <hr>
+                <h2 class="blog-post-title">Human Activity Prediction</h2>
+                <p class="blog-post-meta">June 11, 2017</p>
+                <p>Predicting the activity types (sitting, sitting down, standing, standing up, walking) based on readings of four accelerometers</p>
+                <p><a class="btn btn-primary" href="minis/human_activity" role="button">View details &raquo;</a></p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="blog-footer">
+      <p>&copy; 2017 Melanie Kan</p>
+      <p>
+        <a href="#">Back to top</a>
+      </p>
+    </footer>
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    <script src="../../static/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../static/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>
