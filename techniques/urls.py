@@ -17,8 +17,13 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'waves$', views.waves, name = 'waves'),
-    # url(r'waves/motivation$', views.wave_intro, name = 'wave_motivation'),
-    # url(r'waves/techniques$', views.wave_tech, name = 'wave_techniques'),
-    # url(r'waves/outcome$', views.wave_resl, name = 'wave_outcome'),
+    url(r'^algorithm$', views.algorithm, name = 'algorithm'),
+    url(r'^frequency$', views.frequency, name = 'frequency'),
+    url(r'^statistical$', views.statistical, name = 'statistical'),
+    url(r'^dimension$', views.dimension, name = 'dimension'),
+    url(r'^cluster$', views.cluster, name = 'cluster'),
+    url(r'^regression$', views.regression, name = 'regression'),
+    url(r'^classify$', views.classify, name = 'classify'),
+    url(r'^simulation$', views.simulation, name = 'simulation'),
+    url(r'^data$', views.data, name = 'data'),
 ]

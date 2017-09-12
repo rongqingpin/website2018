@@ -17,12 +17,10 @@ from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    url(r'algorithm$', views.algorithm, name = 'algorithm'),
-    url(r'algorithm/motivation$', views.algo_intro, name = 'algo_motivation'),
-    url(r'algorithm/techniques$', views.algo_tech, name = 'algo_techniques'),
-    url(r'algorithm/outcome$', views.algo_resl, name = 'algo_outcome'),
-    url(r'visualize$', views.visualize, name = 'visualize'),
-    url(r'visualize/motivation$', views.vis_intro, name = 'vis_motivation'),
-    url(r'visualize/techniques$', views.vis_tech, name = 'vis_techniques'),
-    url(r'visualize/outcome$', views.vis_resl, name = 'vis_outcome'),
+    url(r'acoustic$', views.acoustic, name = 'acoustic'),
+    url(r'acoustic/motivation$', views.acoustic_intro, name = 'acoustic_motivation'),
+    # url(r'acoustic/techniques$', views.acoustic_tech, name = 'acoustic_techniques'),
+    # url(r'acoustic/outcome$', views.acoustic_resl, name = 'acoustic_outcome'),
+    url(r'supersonic$', views.supersonic, name = 'supersonic'),
+    url(r'supersonic/motivation$', views.supersonic_intro, name = 'supersonic_motivation'),
 ]

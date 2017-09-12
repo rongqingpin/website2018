@@ -18,4 +18,6 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.summary, name = 'highlights'),
+    url(r'^catalog$', views.catalog, name = 'catalog'),
+    url(r'^tutorial$', views.tutorial, name = 'tutorial'),
 ]

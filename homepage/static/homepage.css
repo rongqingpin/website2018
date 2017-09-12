@@ -4,93 +4,89 @@
 /*
  * Base structure
  */
-html,
-body {
-  height: 100%;
-  background-color: #FFFFFF;
+html {
+  position: relative;
+  min-height: 100%;
 }
 body {
-  color: #36234B; /* this is the name of the homepage */
+  color: #36234B;
   text-align: center;
   text-shadow: none;
-  /* text-shadow: 0 1px 3px rgba(0,0,0,.5); */
+  margin-top: 30px;
+  margin-bottom: 10px;
 }
-/* Extra markup and styles for table-esque vertical and horizontal centering */
-.site-wrapper {
-  display: table;
+body > .container {
+  padding: 60px 10px 0;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
   width: 100%;
-  height: 100%; /* For at least Firefox */
-  min-height: 100%;
-  -webkit-box-shadow: inset 0 0 100px #B8BEDD; /*rgba(0,0,0,.5); */
-          box-shadow: inset 0 0 100px #B8BEDD; /*rgba(0,0,0,.5); */
+  height: 60px;
+  background-color: #B8BEDD;
 }
-.site-wrapper-inner {
-  display: table-cell;
-  vertical-align: top;
+.container .text-muted {
+  margin: 20px 0;
+  color: #36234B;
 }
-.cover-container {
-  margin-right: auto;
-  margin-left: auto;
-}
-/* Padding for spacing */
-.inner {
-  padding: 30px;
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
 }
 
 /*
  * Header
  */
-.masthead-brand {
-  margin-top: 10px;
-  margin-bottom: 10px;
+.navbar .container {
+ padding-top: 5px;
+ padding-bottom: 5px;
+ width: auto;
+ background-color: #B8BEDD;
 }
-.masthead-nav > li {
-  display: inline-block;
-}
-.masthead-nav > li + li {
-  margin-left: 20px;
-}
-.masthead-nav > li > a {
-  padding-right: 0;
-  padding-left: 0;
+.navbar{
   font-size: 16px;
+  border-bottom: transparent;
+}
+.navbar .navbar-brand {
+  color: #36234B;
+  text-shadow: none !important;
   font-weight: bold;
-  color: #36234B; /* rgba(255,255,255,.75); */
-  border-bottom: 2px solid transparent;
 }
-.masthead-nav > li > a:hover,
-.masthead-nav > li > a:focus {
-  background-color: transparent;
-  border-bottom-color: #36234B;
+/* home */
+.navbar .navbar-nav > .active > a,
+.navbar .navbar-nav > .active > a:hover,
+.navbar .navbar-nav > .active > a:focus {
+  color: #FFFFFF;
+  background: #79529E !important;
+  /*background-image: linear-gradient(to bottom,#79529E 0,#36234B 100%);*/
 }
-.masthead-nav > .dropdown > a:focus {
-  border-bottom-color: #79529E;
+/* navbar fonts */
+.navbar .navbar-nav > li > a,
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus {
+  color: #36234B;
   background-color: #B8BEDD;
+  text-shadow: none !important;
 }
-.masthead-nav > .active > a,
-.masthead-nav > .active > a:hover,
-.masthead-nav > .active > a:focus {
-  border-bottom-color: #79529E;
-  color: #79529E;
+/* the arrow on navbar */
+.navbar .navbar-nav > .dropdown > a .caret{
 }
-@media (min-width: 768px) {
-  .masthead-brand {
-    float: left;
-  }
-  .masthead-nav {
-    float: right;
-  }
+.dropdown-toggle:active,
+.open .dropdown-toggle {
+  background: #79529E !important;
+}
+/* mobile version */
+.navbar .navbar-toggle,
+.navbar .navbar-toggle: hover,
+.navbar .navbar-toggle: focus {
+  background-color: #79529E;
 }
 
 /*
- * Cover
+ * Main content
  */
-.cover {
-  padding: 0 20px;
-  color: #36234B;
-}
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 900px;
   position: relative;
   margin: auto;
 }
@@ -106,7 +102,7 @@ body {
 /* Caption text for the figures */
 .text {
   color: #79529E;
-  font-size: 17px;
+  font-size: 16px;
   padding: 8px 12px;
   position: relative;
   bottom: 8px;
@@ -116,16 +112,13 @@ body {
 /* Number text (1/3 etc) */
 .numbertext {
   color: #79529E;
-  font-size: 15px;
+  font-size: 16px;
   padding: 8px 12px;
   position: relative;
   top: 0;
 }
-
-/*
- * Footer
- */
-.mastfoot {
+.row .lead {
+  font-size: 20px;
   color: #36234B;
 }
 
@@ -139,8 +132,9 @@ body {
     top: 0;
   }
   .mastfoot {
-    position: fixed;
-    bottom: 0;
+    position: relative;
+    top: 30px;
+    /*bottom: 0;*/
   }
   /* Start the vertical centering */
   .site-wrapper-inner {

@@ -6,10 +6,12 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Melanie's Website</title>
+	<title>My Project Portfolio</title>
 
   <!-- Bootstrap core CSS -->
   <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+	<!-- Bootstrap theme -->
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap-theme.min.css' %}" >
   <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
   <link rel="stylesheet" type="text/css" href="{% static 'ie10-viewport-bug-workaround.css' %}">
   <!-- Custom styles for this template -->
@@ -19,119 +21,138 @@
 
 
 <body>
-    <div class="site-wrapper">
-        <div class="site-wrapper-inner">
-            <div class="cover-container">
+	<!-- Fixed navbar -->
+	<nav class = "navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#">Project Depot</a>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#">Home</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Subject of Analysis<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li class="dropdown-header">Time-Series</li>
+							<li><a href="timeseries/acoustic">Acoustic Event Detection</a></li>
+							<li><a href="timeseries/supersonic">Structure Visualization</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Images</li>
+							<li><a href="images/waves">Automatic Wave Tracking</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Data Frames</li>
+							<li><a href="dataframes/iosapps">iOS Mobile App Analytics</a></li>
+							<li><a href="dataframes/minis">Data Science Mini Projects</a></li>
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Techniques<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="tech/algorithm">Algorithm Design</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Signal Processing</li>
+							<li><a href="tech/frequency">Time-Frequency</a></li>
+							<li><a href="tech/statistical">Statistical</a></li>
+							<li role="separator" class="divider"></li>
+							<li class="dropdown-header">Modeling</li>
+							<li><a href="tech/dimension">Dimensionality Recuction</a></li>
+							<li><a href="tech/cluster">Clustering</a></li>
+							<li><a href="tech/regression">Regression</a></li>
+							<li><a href="tech/classify">Classification</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="tech/simulation">Numerical Simulations</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="tech/data">Web-Scraping</a></li>
+						</ul>
+					</li>
+					<li><a href="about/catalog">Chronological Catalog</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="about">About Me</a></li>
+							<li><a href="about/tutorial">My Tutorials</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-                <div class="masthead clearfix">
-                    <div class="inner">
-                        <h3 class="masthead-brand">Project Depot</h3>
+	<!-- hightlights -->
+	<div class="container">
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+				<div class="text">
+					Structure extraction &amp; pathway visualization of large datasets, using statistical &amp; time-frequency signal analysis
+				</div>
+				<img src="../static/structure.png" alt = "some text" style="width:100%">
+				<div class="numbertext">1 / 3</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="text">
+					Acoustic event detection algorithm which combines wavelet analysis, multi-correlation &amp; pattern recognition
+				</div>
+				<img src="../static/algorithm.png" alt = "some text" style="width:100%">
+				<div class="numbertext">2 / 3</div>
+			</div>
+			<div class="mySlides fade">
+				<div class="text">
+					Event-conditioned signal filtering, statistics &amp; ensemble averaging reveal structures &amp; patterns of interest
+				</div>
+				<img src="../static/events.png" alt = "some text" style="width:100%">
+				<div class="numbertext">3 / 3</div>
+			</div>
+			<br>
+			<div style="text-align:center">
+				<span class="dot" onclick="currentSlide(1)"></span>
+				<span class="dot" onclick="currentSlide(2)"></span>
+			</div>
+		</div>
 
-                        <nav>
-                            <ul class="nav masthead-nav">
-                                <!-- Home page -->
-                                <li class="active"><a href="#">Home</a></li>
-                                <!-- Time series -->
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Time Series<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="timeseries/algorithm">Acoustic Event Detection</a></li>
-                                        <li><a href="timeseries/visualize">Structure Visualization</a></li>
-                                    </ul>
-                                </li>
-                                <!-- Images -->
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Images<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="images/waves">Wave Tracking</a></li>
-                                    </ul>
-                                </li>
-																<!-- DataScience -->
-                                <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Data Frames<span class="caret"></span></a>
-                                    <ul class="dropdown-menu">
-                                        <li><a href="dataframes/iosapps">iOS Mobile Apps</a></li>
-																				<li><a href="dataframes/minis">Mini Projects</a></li>
-                                    </ul>
-                                </li>
-                                <!-- About -->
-                                <li><a href="about">About</a></li>
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
+		<script>
+			var slideIndex = 0;
+			showSlides();
+			function showSlides() {
+					var i;
+					var slides = document.getElementsByClassName("mySlides");
+					for (i = 0; i < slides.length; i++) {
+							slides[i].style.display = "none";
+					}
+					slideIndex++;
+					if (slideIndex> slides.length) {slideIndex = 1}
+					slides[slideIndex-1].style.display = "block";
+					setTimeout(showSlides, 5000); // Change image every 2 seconds
+			}
+		</script>
 
-                <div class="inner cover">
-                    <div class="slideshow-container">
-                        <div class="mySlides fade">
-                            <div class="text">
-                              Structure extraction &amp; pathway visualization of large datasets, using statistical &amp; time-frequency signal analysis
-                            </div>
-                            <img src="../static/structure.png" alt = "some text" style="width:100%">
-                            <div class="numbertext">1 / 3</div>
-                        </div>
-                        <div class="mySlides fade">
-                            <div class="text">
-                              Acoustic event detection algorithm which combines wavelet analysis, multi-correlation &amp; pattern recognition
-                            </div>
-                            <img src="../static/algorithm.png" alt = "some text" style="width:100%">
-                            <div class="numbertext">2 / 3</div>
-                        </div>
-                        <div class="mySlides fade">
-                            <div class="text">
-                              Event-conditioned signal filtering, statistics &amp; ensemble averaging reveal structures &amp; patterns of interest
-                            </div>
-                            <img src="../static/events.png" alt = "some text" style="width:100%">
-                            <div class="numbertext">3 / 3</div>
-                        </div>
-                        <br>
-                        <div style="text-align:center">
-                            <span class="dot" onclick="currentSlide(1)"></span>
-                            <span class="dot" onclick="currentSlide(2)"></span>
-                        </div>
-                    </div>
+		<br />
 
-                    <script>
-                      var slideIndex = 0;
-                      showSlides();
-                      function showSlides() {
-                          var i;
-                          var slides = document.getElementsByClassName("mySlides");
-                          for (i = 0; i < slides.length; i++) {
-                              slides[i].style.display = "none";
-                          }
-                          slideIndex++;
-                          if (slideIndex> slides.length) {slideIndex = 1}
-                          slides[slideIndex-1].style.display = "block";
-                          setTimeout(showSlides, 5000); // Change image every 2 seconds
-                      }
-                    </script>
+		<div class="row">
+			<p class="lead">
+					Pattern Extraction and Problem Solving through <br />Signal Processing and Algorithm Design
+			</p>
+		</div>
+	</div>
 
-                    <br />
-
-                    <div class="row">
-                        <p class="lead">
-                            Pattern Extraction and Problem Solving through <br />Signal Processing and Algorithm Design
-                        </p>
-                       </div>
-                    </div>
-                </div>
-
-                <div class="mastfoot">
-                    <div class="inner">
-                        <p align="center">&copy; 2017 Melanie Kan</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+	<footer class="footer">
+		<div class="container">
+			<p class="text-muted" align = 'left'>&copy; 2017 Melanie Kan</p>
+		</div>
+	</footer>
 
   <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    <script>window.jQuery || document.write('<script src="../static/jquery.min.js"><\/script>')</script>
     <script src="../static/bootstrap.min.js"></script>
+		<script src="../static/docs.min.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="../static/ie10-viewport-bug-workaround.js"></script>
 </body>

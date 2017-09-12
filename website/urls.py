@@ -22,5 +22,6 @@ urlpatterns = [
     url(r'^timeseries/', include('timeseries.urls')),
     url(r'^images/', include('images.urls')),
     url(r'^dataframes/', include('dataframes.urls')),
+    url(r'^tech/', include('techniques.urls')),
     url(r'^about/', include('about.urls')),
 ]

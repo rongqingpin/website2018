@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'timeseries',
     'images',
     'dataframes',
+    'techniques',
     'about',
 ]
 

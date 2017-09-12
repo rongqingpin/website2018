@@ -24,11 +24,26 @@
             <h3 class="text-muted">Acoustic Event Detection</h3>
             <nav>
                 <ul class="nav nav-justified">
-                    <li><a href="../../#">Home</a></li>
-                    <li><a href="algorithm/motivation">Motivation</a></li>
-                    <li><a href="algorithm/techniques">Workflow</a></li>
-                    <li><a href="algorithm/outcome">Outcome</a></li>
-                    <li class="active"><a href="#">Application</a></li>
+										<li class="active"><a href="#">Overview</a></li>
+										<li><a href="/timeseries/acoustic/motivation">Motivation</a></li>
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Techniques<span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="../../tech/algorithm">Algorithm Design</a></li>
+												<li role="separator" class="divider"></li>
+												<li class="dropdown-header">Signal Processing</li>
+												<li><a href="../../tech/frequency">Time-Frequency</a></li>
+												<li><a href="../../tech/statistical">Statistical</a></li>
+												<li role="separator" class="divider"></li>
+												<li class="dropdown-header">Modeling</li>
+												<li><a href="../../tech/dimension">Dimensionality Recuction</a></li>
+												<li role="separator" class="divider"></li>
+												<li><a href="../../tech/simulation">Numerical Simulations</a></li>
+											</ul>
+										</li>
+										<li><a href="../../#" style="color:#79529E;">Homepage</a></li>
+										<li><a href="../../about/catalog" style="color:#79529E;">Projects</a></li>
+                    <li><a href="../../about" style="color:#79529E;">About</a></li>
                 </ul>
             </nav>
         </div>
@@ -41,7 +56,7 @@
             <div class="col-lg-3">
                 <h3>Motivation &amp; Problem Statement</h3>
                 <p>Given the acoustic signals (e.g. the noise produced by airplanes), can we identify the source (e.g. certain flow structures of the engine exhaust) which produce them?</p>
-                <p><a class="btn btn-primary" href="algorithm/motivation" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-primary" href="/timeseries/acoustic/motivation" role="button">View details &raquo;</a></p>
             </div>
             <div class="col-lg-6">
                 <h3>Workflow &amp; Techniques</h3>
@@ -55,7 +70,7 @@
                         <li><strong>Event-Based Analysis</strong>: statistics; signal filtering; conditional averaging; event-conditioned analysis</li>
                     </ol>
                 </p>
-                <p><a class="btn btn-primary" href="algorithm/techniques" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-primary" href="https://github.com/rongqingpin/Function_Library" role="button">Learn More &raquo;</a></p>
             </div>
             <div class="col-lg-3">
                 <h3>Outcome</h3>
@@ -65,7 +80,7 @@
                         <li>Extracted the structure features and the flow activities associated with noise production</li>
                     </ul>
                 </p>
-                <p><a class="btn btn-primary" href="algorithm/outcome" role="button">View details &raquo;</a></p>
+                <p><a class="btn btn-primary" href="https://www.academia.edu/12568795/The_Properties_and_Localizations_of_Acoustic_Sources_of_High_Speed_Jet" role="button">Learn More &raquo;</a></p>
             </div>
         </div>
 
