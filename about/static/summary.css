@@ -88,9 +88,14 @@ body {
 .cover {
   padding: 0 20px;
   color: #36234B;
+  font-size: 17px;
+}
+th {
+  font-size: 17px;
 }
 td {
   text-align: left;
+  font-size: 17px;
 }
 table {
   width: 50%;
@@ -138,11 +143,11 @@ table {
   }
 }
 @-webkit-keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 @keyframes fade {
-  from {opacity: .4} 
+  from {opacity: .4}
   to {opacity: 1}
 }
 /* On smaller screens, decrease text size */

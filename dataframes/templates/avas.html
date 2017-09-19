@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Free-Lancing Projects</title>
+
+	<!-- Bootstrap core CSS -->
+	<link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}">
+	<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+	<link rel="stylesheet" type="text/css" href="{% static 'ie10-viewport-bug-workaround.css' %}">
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" type="text/css" href="{% static 'overview.css' %}">
+	<!--<link rel="stylesheet" href="{% static 'homepage.css' %}">-->
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="masthead">
+            <h3 class="text-muted">Estimation of Optimal Transformation for Regression</h3>
+            <nav>
+                <ul class="nav nav-justified">
+										<li class="active"><a href="#">Overview</a></li>
+										<!-- <li><a href="/timeseries/acoustic/motivation">Motivation</a></li> -->
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Techniques<span class="caret"></span></a>
+											<ul class="dropdown-menu">
+												<li><a href="../../tech/algorithm">Algorithm Design</a></li>
+												<li role="separator" class="divider"></li>
+												<li class="dropdown-header">Signal Processing</li>
+												<li><a href="../../tech/statistical">Statistical</a></li>
+												<li role="separator" class="divider"></li>
+												<li class="dropdown-header">Modeling</li>
+												<li><a href="../../tech/dimension">Regression</a></li>
+											</ul>
+										</li>
+										<li><a href="../../#" style="color:#79529E;">Homepage</a></li>
+										<li><a href="../../about/catalog" style="color:#79529E;">Projects</a></li>
+                    <li><a href="../../about" style="color:#79529E;">About</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <br/>
+                    <h4>Input:</h4>
+                    <p class="lead">Multiple independent variables x<sub>i</sub> (i from 1 to N), variable y (result from an unknown function of x<sub>i</sub>); no apparent linear relationship</p>
+                    <center>
+                        <img src="../static/ace_original_data.png" style="width: 90%" align="middle">
+                    </center>
+                    <br/>
+                </div>
+                <div class="col-md-6">
+                    <br/>
+                    <h4>Output:</h4>
+                    <p class="lead">x<sub>i</sub> and y are transformed such that they can be modeled through linear regression (maximizes the variance in y that is accounted for through x<sub>i</sub>)</p>
+                    <center>
+                        <img src="../static/ace_transformed_data.png" style="width: 90%" align="middle">
+                    </center>
+                    <br/>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="row">
+            <div class="col-lg-3">
+                <h3>Motivation &amp; Problem Statement</h3>
+                <p></p>
+                <p><a class="btn btn-primary" href="/timeseries/acoustic/motivation" role="button">View details &raquo;</a></p>
+            </div>
+            <div class="col-lg-6">
+                <h3>Workflow &amp; Techniques</h3>
+                <p>
+                    <ol>
+                        <li><strong>Data Cleaning</strong>: denoising; detrending; down-sampling; faulty data detection &amp; replacement</li>
+                    </ol>
+                </p>
+                <p><a class="btn btn-primary" href="https://github.com/rongqingpin/Function_Library" role="button">Learn More &raquo;</a></p>
+            </div>
+            <div class="col-lg-3">
+                <h3>Outcome</h3>
+                <p>
+                    <ul>
+                        <li>Identified the location, time &amp; frequency of occurrence of the acoustic sources of high speed jet flows (over 90% accuracy)</li>
+                    </ul>
+                </p>
+                <p><a class="btn btn-primary" href="https://www.academia.edu/12568795/The_Properties_and_Localizations_of_Acoustic_Sources_of_High_Speed_Jet" role="button">Learn More &raquo;</a></p>
+            </div>
+        </div> -->
+
+        <footer class="footer">
+            <p>&copy; 2017 Melanie Kan</p>
+            <p>
+                <a href="#">Back to top</a>
+            </p>
+        </footer>
+    </div>
+
+	<!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="jquery.min.js"><\/script>')</script>
+    <script src="../static/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../static/ie10-viewport-bug-workaround.js"></script>
+</body>
+</html>

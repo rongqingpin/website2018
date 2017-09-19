@@ -18,5 +18,7 @@ from . import views
 
 urlpatterns = [
     url(r'iosapps$', views.iosapps, name = 'iosapps'),
+    url(r'avas$', views.avas, name = 'avas'),
     url(r'minis$', views.minis, name = 'minis'),
+    url(r'minis/student_loan$', views.studentLoan, name = 'minis'),
 ]
